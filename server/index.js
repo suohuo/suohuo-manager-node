@@ -38,5 +38,5 @@ app.use(e2k(webpackHotMiddleware(compiler)))
 app.use(router.routes())
 
 app.listen(7000, () => {
-  console.log('server is running')
+  console.log('server is running port 7000')
 })
