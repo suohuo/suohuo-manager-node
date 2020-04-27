@@ -10,7 +10,6 @@ const router = new Router()
 const root = path.join(process.cwd(), '/dist/')
 
 router.get('/', async (ctx) => {
-  console.log(1111)
   await send(ctx, 'index.html', { root })
 })
 router.get(/index(\.html)?$/, (ctx, next) => {

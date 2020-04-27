@@ -12,10 +12,11 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.scss'],
     alias: {
       component: path.resolve(__dirname, 'src/utilities/'),
       template: path.resolve(__dirname, 'src/templates/'),
+      'react-dom': '@hot-loader/react-dom'
     },
   },
   // stats: 'errors-only',
@@ -54,7 +55,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/template.html',
+      template: './src/template/index.html',
       filename: 'index.html',
     }),
     new CleanWebpackPlugin(),

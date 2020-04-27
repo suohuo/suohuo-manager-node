@@ -24,10 +24,10 @@ const devConfig = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 2,
+              sourceMap: true,
               // 开启cssmodule
-              // modules: true
-              //  localIdentName: '[local]_[hash:base64:5]'
+              modules: true,
+              localIdentName: '[local]_[hash:base64:5]'
             },
           },
           'sass-loader',

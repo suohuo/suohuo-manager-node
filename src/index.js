@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
+// import { hot } from 'react-hot-loader/root'
 import ReactDOM from 'react-dom';
-import AutoHook from './autoHook/Hooks';
+import { HashRouter } from 'react-router-dom'
+import AppComponent from './app'
 
+import './style/index.scss';
+import 'antd/dist/antd.css'
 
-import './index.css';
-
-
-class App extends Component {
-  render() {
-    return 111111;
-  }
+const App = () => {
+  return (
+    <HashRouter>
+       <AppComponent />
+    </HashRouter>
+  )
 }
+
+// const HotApp = hot(module)(App)
 
 ReactDOM.render(<App />, document.getElementById('root'));
