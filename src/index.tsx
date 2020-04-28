@@ -10,7 +10,7 @@ import 'antd/dist/antd.css'
 const App: React.FC = () => {
   return (
     <HashRouter>
-     <AppComponent />
+     <AppComponent title="管理系统"/>
     </HashRouter>
   )
 }

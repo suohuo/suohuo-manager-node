@@ -14,9 +14,8 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx', '.scss'],
     alias: {
-      component: path.resolve(__dirname, 'src/utilities/'),
-      template: path.resolve(__dirname, 'src/templates/'),
-      'react-dom': '@hot-loader/react-dom'
+      components: path.join(__dirname, '../src/components'),
+      containers: path.join(__dirname, '../src/containers')
     },
   },
   // stats: 'errors-only',

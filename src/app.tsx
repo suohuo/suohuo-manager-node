@@ -1,10 +1,22 @@
 import React from 'react'
-import { Button } from 'antd'
-import style from './style/layout.scss'
+import Menu from './components/menu'
+import style from './style/layout.scss' 
 
-const AppComponent: React.FC = () => {
+interface Props {
+  title?: string
+}
+
+const AppComponent: React.FC<Props> = (props) => {
   return (
-    <div className={style.wrap}>111</div>
+    <div className={style.soho_layout_wrap}>
+      <div className={style.soho_layout_header}>{props.title}</div>
+      <div className={style.soho_layout_center}>
+        <div className={style.soho_layout_menu}>
+          <Menu />
+        </div>
+        <div className={style.soho_layout_content}>content</div>
+      </div>
+    </div>
   )
 }
 
