@@ -21,6 +21,7 @@ const devConfig = {
         // loader的执行顺序是从右往左
         use: [
           'style-loader',
+          { loader: "@teamsupercell/typings-for-css-modules-loader" },
           {
             loader: 'css-loader',
             options: {
@@ -30,7 +31,9 @@ const devConfig = {
               localIdentName: '[local]_[hash:base64:5]'
             },
           },
-          'sass-loader',
+          {
+            loader: 'sass-loader'
+          },
           'postcss-loader',
         ],
       },

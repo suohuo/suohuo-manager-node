@@ -1,0 +1,27 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["./src/*"],
+      "@/*": ["./src/*"]
+    },
+    "diagnostics": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "Commonjs",
+    "moduleResolution": "node",
+    "target": "ES2019",
+    "jsx": "react",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "plugins": [{
+      "name": "typescript-plugin-css-modules"
+    }],
+    "typeRoots": ["./@types"]
+  },
+  "exclude": ["**/node_modules/*"]
+}

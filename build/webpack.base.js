@@ -5,14 +5,14 @@ const Webpack = require('webpack');
 
 module.exports = {
   entry: {
-    main: './src/index.js',
+    main: './src/index.tsx',
   },
   output: {
   // publicPath: '/dist/',
     path: path.resolve(__dirname, '../dist'),
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.scss'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.scss'],
     alias: {
       component: path.resolve(__dirname, 'src/utilities/'),
       template: path.resolve(__dirname, 'src/templates/'),
@@ -28,6 +28,11 @@ module.exports = {
         'babel-loader',
         //   'eslint-loader'
       ],
+    },
+    {
+      test: /\.(ts|tsx)$/,
+      exclude: /node_modules/,
+      loader: "ts-loader"
     },
     {
       test: /\.(png|jpg|gif)$/,
