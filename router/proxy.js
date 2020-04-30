@@ -8,7 +8,6 @@ module.exports = function() {
   let target = process.env.proxy;
   const ip = target.split(':')[0];
   target = ipReg.test(ip) || ip === 'localhost' ? `http://${target}` : target;
-  console.log('file', filter)
   return proxy(filter, {
     target,
     changeOrigin: true,

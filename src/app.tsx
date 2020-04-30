@@ -1,26 +1,31 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+import { Switch, Route, withRouter, RouteComponentProps, Redirect } from 'react-router-dom'
+import { Spin } from 'antd'
 import Menu from './components/menu'
-import ReducerDemo from './containers/reducerDemo'
 import style from './style/layout.scss' 
+import RootRouters from './rootRouters'
 
-interface Props {
-  title?: string
-}
-
-const AppComponent: React.FC<Props> = (props) => {
+const AppComponent: React.FC<RouteComponentProps> = (props) => {
   return (
     <div className={style.soho_layout_wrap}>
-      <div className={style.soho_layout_header}>{props.title}</div>
+      <div className={style.soho_layout_header}>管理系统</div>
       <div className={style.soho_layout_center}>
         <div className={style.soho_layout_menu}>
           <Menu />
         </div>
         <div className={style.soho_layout_content}>
-          <ReducerDemo />
+          <Suspense fallback={<Spin />}>
+            <Switch>
+              {RootRouters.map(item => {
+                return <Route key={item.path} path={item.path} exact={item.exact} component={item.componentPath} />
+              })}
+              <Redirect to='/' />
+            </Switch>
+          </Suspense>
         </div>
       </div>
     </div>
   )
 }
 
-export default AppComponent
+export default withRouter(AppComponent)

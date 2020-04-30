@@ -1,6 +1,7 @@
 const MENU_CONFIG = [{
   title: '用户管理',
   key: 'userManger',
+  sub: 'sub1',
   children: [{
     title: '个人中心',
     key: 'userCenter'
@@ -11,6 +12,7 @@ const MENU_CONFIG = [{
 }, {
   title: '其他',
   key: 'other',
+  sub: 'sub2',
   children: [{
     title: '权限中心',
     key: 'permission'
