@@ -36,9 +36,16 @@ app.use(
 app.use(e2k(webpackHotMiddleware(compiler)))
 
 app.use(router.routes())
-
 const mock = require('../router/mock.js')
-app.use(mock.routes())
+const proxy = require('../router/proxy.js')
+
+//  npm命令中带有process.env.proxy参数,则开启代理到指定服务器
+if(process.env.proxy) {
+  app.use(proxy())
+} else {
+  app.use(mock.routes())
+}
+
 
 
 app.listen(7000, () => {
