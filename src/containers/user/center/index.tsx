@@ -9,7 +9,7 @@ const User = () =>  {
       <div className="search_box">
        <Search />
       </div>
-      <div className="table_box">
+      <div className="table_box">
        <List />
       </div>
     </>
