@@ -37,6 +37,10 @@ app.use(e2k(webpackHotMiddleware(compiler)))
 
 app.use(router.routes())
 
+const mock = require('../router/mock.js')
+app.use(mock.routes())
+
+
 app.listen(7000, () => {
   console.log('server is running port 7000')
 })

@@ -24,12 +24,11 @@ const MenuList: React.FC = () => {
     }
     
     return (
-      <>
         <Menu
-        mode="inline"
-        openKeys={openKeys}
-        onOpenChange={onOpenChange}
-        style={MenuStyle}
+          mode="inline"
+          openKeys={openKeys}
+          onOpenChange={onOpenChange}
+          style={MenuStyle}
         >
          {
            MENU_CONFIG?.map((item, index) => {
@@ -50,7 +49,6 @@ const MenuList: React.FC = () => {
            })
          }
        </Menu>
-      </>
     )
 }
 

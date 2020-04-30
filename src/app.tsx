@@ -1,5 +1,6 @@
 import React from 'react'
 import Menu from './components/menu'
+import ReducerDemo from './containers/reducerDemo'
 import style from './style/layout.scss' 
 
 interface Props {
@@ -14,7 +15,9 @@ const AppComponent: React.FC<Props> = (props) => {
         <div className={style.soho_layout_menu}>
           <Menu />
         </div>
-        <div className={style.soho_layout_content}>content</div>
+        <div className={style.soho_layout_content}>
+          <ReducerDemo />
+        </div>
       </div>
     </div>
   )
