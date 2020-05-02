@@ -1,0 +1,22 @@
+{
+  "code": "0",
+  "desc": "成功",
+  "data": {
+    "totalCount": 100,
+    "totalPage": 5,
+    "list": [
+      {
+        "id": 1,
+        "userId": 123,
+        "userAge": 20,
+        "userSex": "男"
+      },
+      {
+        "id": 2,
+        "userId": 321,
+        "userAge": 20,
+        "userSex": "女"
+      }
+    ]
+  }
+}

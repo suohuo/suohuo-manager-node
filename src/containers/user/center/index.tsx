@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
 import Search from './search'
 import List from './list'
+import { observer } from 'mobx-react-lite'
+import store from './store'
 
 
 const User = () =>  {
+  const userStore = useContext(store)
+  useEffect(() => {
+    userStore.fetchList()
+  }, [])
   return (
     <>
       <div className="search_box">
@@ -16,4 +22,4 @@ const User = () =>  {
   )
 }
 
-export default User
+export default observer(User)

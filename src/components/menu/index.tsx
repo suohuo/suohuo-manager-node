@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Menu } from 'antd';
 // import { Link } from 'react-router';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import MENU_CONFIG from './const'
 
 const { SubMenu } = Menu;
@@ -36,7 +35,7 @@ const MenuList: React.FC = () => {
               return (
                 <SubMenu
                  key={item.sub}
-                 title={<span><MailOutlined /><span>{item.title}</span></span>}
+                 title={<span>{item.title}</span>}
                 >
                   {
                     item.children?.map((item, index) => {
