@@ -101,7 +101,7 @@ const common = {
     // }
     return fetch(url, targetOpts) // eslint-disable-line no-undef
       .then((response) => {
-        if (response.status >= 200 && response.status < 300) {
+        if (response.status >= 200 && response.status < 404) {
           return response
         } else {
           const error = new Error(response.statusText)
@@ -122,8 +122,8 @@ const common = {
               } else {
                 // 业务接口成功
                 if (res.code !== '0') {
-                  this.handleError(res.desc)
-                  throw new Error(res.desc)
+                  this.handleError(res.msg)
+                  throw new Error(res.msg)
                 }
               }
               return res

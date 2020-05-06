@@ -21,7 +21,7 @@ class Store {
   @action
   fetchList = (params = this.params) => {
     Common.newFetch({
-      url: '/user/getUserList',
+      url: '/v1/book/latest',
       params
     }).then((res) => {
       if (res['code'] === '0') {
