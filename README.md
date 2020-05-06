@@ -24,7 +24,7 @@ proxy=http://localhost:3000 npm run dev
 ```
 # 项目结构
 
-<pre>
+```
 ├── client                             /* 客户端代码 */
 │   ├── build                          /*  构建脚本 */
 │   │   ├── webpack.base.conf.js       /* 构建脚本基础层 */
@@ -56,4 +56,4 @@ proxy=http://localhost:3000 npm run dev
 ├── postcss.config.js  
 ├── gitignore                     
 └── README.md
-</pre>
+```
