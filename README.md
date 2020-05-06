@@ -28,7 +28,7 @@ proxy=http://localhost:3000 npm run dev
 ├── client                                 客户端代码
 │   ├── build                              构建脚本
 │   │   ├── webpack.base.conf.js           构建脚本基础层 
-│   │   ├── webpack.dev.conf.js        /* 构建脚本 - 开发环境 */
+│   │   ├── webpack.dev.conf.js            构建脚本 - 开发环境
 │   │   └── webpack.prod.conf.js       /* 构建脚本 - 生产环境 */
 │   ├── mock                           /* mock数据 */
 │   │   ├── ...
