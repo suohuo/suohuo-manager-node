@@ -49,7 +49,7 @@ const Login: React.FC<Props> = (props) =>  {
       return;
     }
     if (info.file.status === 'done') {
-      setImageUrl('http://')
+      setImageUrl(info.file.response.data)
       // Get this url from response in real world.
       
     }
