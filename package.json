@@ -54,7 +54,7 @@
         "koa-static": "^5.0.0",
         "loadsh": "0.0.4",
         "mini-css-extract-plugin": "^0.8.0",
-        "node-sass": "^4.13.0",
+        "node-sass": "^7.0.0",
         "optimize-css-assets-webpack-plugin": "^5.0.3",
         "postcss-loader": "^3.0.0",
         "sass-loader": "^8.0.0",
